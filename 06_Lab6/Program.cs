@@ -82,25 +82,56 @@ namespace _06_Lab6
 
 
             /////////////////
-            double sum = 0.0, x;
+            //double sum = 0.0, x;
 
-            Console.Write("Введіть значення x: ");
-            x = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Введіть значення x: ");
+            //x = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Введіть похибку eps: ");
-            double eps = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Введіть похибку eps: ");
+            //double eps = Convert.ToDouble(Console.ReadLine());
 
-            double term;
-            int i = 1;
+            //double term;
+            //int i = 1;
 
-            do
+            //do
+            //{
+            //    term = Math.Pow(x, i) * Math.Sin(i * Math.PI / 4);
+            //    sum += term;
+            //    i++;
+            //} while (Math.Abs(term) > eps);
+
+            //Console.WriteLine("Сума ряду з точністю eps: " + sum);
+
+
+            ///////////////Home TAsk
+            Console.Write("Введіть кількість чисел: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int countPositive = 0;
+            int countEven = 0;
+            int? max = null;
+            int? min = null;
+
+            for (int i = 0; i < n; i++)
             {
-                term = Math.Pow(x, i) * Math.Sin(i * Math.PI / 4);
-                sum += term;
-                i++;
-            } while (Math.Abs(term) > eps);
+                Console.Write($"Введіть число {i + 1}: ");
+                int number = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Сума ряду з точністю eps: " + sum);
+                if (number > 0)
+                    countPositive++;
+                if (number % 2 == 0)
+                    countEven++;
+
+                if (max == null || number > max)
+                    max = number;
+                if (min == null || number < min)
+                    min = number;
+            }
+
+            Console.WriteLine($"\nКількість позитивних чисел: {countPositive}");
+            Console.WriteLine($"Кількість парних чисел: {countEven}");
+            Console.WriteLine($"Максимальне число: {max}");
+            Console.WriteLine($"Мінімальне число: {min}");
         }
     }
 }
