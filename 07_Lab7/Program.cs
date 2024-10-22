@@ -91,57 +91,101 @@ namespace _07_Lab7
 
             ///////#3
 
+            //int n;
+            //Console.Write("Введіть кількість елементів для векеторів : ");
+            //do
+            //{
+            //    n = int.Parse(Console.ReadLine());
+            //    if (n > 0)
+            //        break;
+            //    Console.Write("n має бути > 0 : ");
+            //} while (n < 1);
+
+            //double[] a = new double[n];
+            //double[] b = new double[n];
+            //double[] c = new double[n];
+
+            //Console.WriteLine("Введіть елементи вектора a:");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.Write($"a[{i}] = ");
+            //    a[i] = double.Parse(Console.ReadLine());
+            //}
+
+            //Console.WriteLine("Введіть елементи вектора b:");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.Write($"b[{i}] = ");
+            //    b[i] = double.Parse(Console.ReadLine());
+            //}
+
+            //Console.WriteLine("Введіть елементи вектора c:");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.Write($"c[{i}] = ");
+            //    c[i] = double.Parse(Console.ReadLine());
+            //}
+
+            //double resAB = 0;
+            //for (int i = 0; i < n; i++)
+            //{
+            //    resAB += a[i] * b[i];
+            //}
+
+            //double resAC = 0;
+            //for (int i = 0; i < n; i++)
+            //{
+            //    resAC += a[i] * c[i];
+            //}
+
+            //double s = 2 * resAB - 3 * resAC;
+
+            //Console.WriteLine($"Значення виразу s: {s}");
+
+
+            ////////////////4
+            ///
             int n;
-            Console.Write("Введіть кількість елементів для векеторів : ");
+            Console.Write("Введіть кількість елементів у масиві: ");
             do
             {
                 n = int.Parse(Console.ReadLine());
                 if (n > 0)
                     break;
-                Console.Write("n має бути > 0 : ");
+                Console.Write("n має бути > 0: ");
             } while (n < 1);
 
-            double[] a = new double[n];
-            double[] b = new double[n];
-            double[] c = new double[n];
+            int[] array = new int[n];
 
-            Console.WriteLine("Введіть елементи вектора a:");
+            Console.WriteLine("Введіть елементи масиву:");
             for (int i = 0; i < n; i++)
             {
-                Console.Write($"a[{i}] = ");
-                a[i] = double.Parse(Console.ReadLine());
+                Console.Write($"Ел[{i}] = ");
+                array[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine("Введіть елементи вектора b:");
+            int index = 0;
             for (int i = 0; i < n; i++)
             {
-                Console.Write($"b[{i}] = ");
-                b[i] = double.Parse(Console.ReadLine());
+                if (array[i] != 0)
+                {
+                    array[index++] = array[i];
+                }
             }
 
-            Console.WriteLine("Введіть елементи вектора c:");
+            while (index < n)
+            {
+                array[index++] = 0;
+            }
+
+            Console.WriteLine("Результат:");
             for (int i = 0; i < n; i++)
             {
-                Console.Write($"c[{i}] = ");
-                c[i] = double.Parse(Console.ReadLine());
+                Console.Write(array[i] + " ");
             }
 
-            double resAB = 0;
-            for (int i = 0; i < n; i++)
-            {
-                resAB += a[i] * b[i];
-            }
-
-            double resAC = 0;
-            for (int i = 0; i < n; i++)
-            {
-                resAC += a[i] * c[i];
-            }
-
-            double s = 2 * resAB - 3 * resAC;
-
-            Console.WriteLine($"Значення виразу s: {s}");
-
+            Console.WriteLine();
+            Console.ReadKey();
         }
     }
 }
