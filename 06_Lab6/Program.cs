@@ -11,6 +11,7 @@ namespace _06_Lab6
         static void Main(string[] args)
         {
             string buf;
+            Console.OutputEncoding = Encoding.UTF8;
 
             ////////////////////////
             //Console.WriteLine("Введіть значення A=");
@@ -104,8 +105,15 @@ namespace _06_Lab6
 
 
             ///////////////Home TAsk
+            int n;
             Console.Write("Введіть кількість чисел: ");
-            int n = int.Parse(Console.ReadLine());
+            do
+            {
+                n = int.Parse(Console.ReadLine());
+                if (n > 0)
+                    break;
+                Console.WriteLine("n має бути > 0");
+            } while (n < 1);
 
             int countPositive = 0;
             int countEven = 0;
