@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace _05_Lab5
 {
     internal class Program
     {
-        static double x, y;
-        static double a, b, c;
         static void Main()
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -47,7 +42,7 @@ namespace _05_Lab5
             //    }
             //    Console.WriteLine();
             //}
-             
+
             //for (int i = 0; i < 3; i++)
             //{
             //    for (int j = 0; j < 4; j++)  
@@ -99,6 +94,8 @@ namespace _05_Lab5
 
 
             ///////Приклад 4.2.1
+
+
             //int n; // розмірність масиву
             //Console.WriteLine("Введіть розмірність масиву n:");
             //n = Convert.ToInt32(Console.ReadLine());
@@ -138,6 +135,9 @@ namespace _05_Lab5
 
 
             ///////Приклад 4.2.3
+
+
+
             //int n=7; // розмірність масиву
             //int[,]  Arr = new int[n,n];  
             //Random r = new Random(1);  
@@ -194,22 +194,22 @@ namespace _05_Lab5
 
 
             ///////Завдання 1 11
-            //int N; // Розмірність матриці
+
+
+            //int N;
             //Console.WriteLine("Введіть розмірність матриці N:");
             //N = Convert.ToInt32(Console.ReadLine());
-            
+
             //int[,] A = new int[N, N];
-            
-            //// Заповнення матриці згідно з формулою a_ij = i^i - j^j
+
             //for (int i = 0; i < N; i++)
             //{
             //    for (int j = 0; j < N; j++)
             //    {
-            //        A[i, j] = (int)Math.Pow(i + 1, i + 1) - (int)Math.Pow(j + 1, j + 1);
+            //        A[i, j] = (int)Math.Pow(i, j) - (int)Math.Pow(j, i);
             //    }
             //}
-            
-            //// Виведення матриці
+
             //Console.WriteLine("Матриця A:");
             //for (int i = 0; i < N; i++)
             //{
@@ -219,8 +219,7 @@ namespace _05_Lab5
             //    }
             //    Console.WriteLine();
             //}
-            
-            //// Обчислення суми додатних елементів
+
             //int positiveSum = 0;
             //for (int i = 0; i < N; i++)
             //{
@@ -232,7 +231,7 @@ namespace _05_Lab5
             //        }
             //    }
             //}
-            
+
             //Console.WriteLine("Сума додатних елементів матриці A: {0}", positiveSum);
             //Console.ReadLine();
 
@@ -242,7 +241,7 @@ namespace _05_Lab5
 
 
             ///2   11
-            
+
             //int n, m;
 
             //Console.WriteLine("Введіть кількість рядків n:");
@@ -254,7 +253,6 @@ namespace _05_Lab5
             //int[,] array = new int[n, m];
             //Random rand = new Random();
 
-            //// Заповнення масиву випадковими числами і виведення його
             //Console.WriteLine("Двовимірний масив:");
             //for (int i = 0; i < n; i++)
             //{
@@ -269,7 +267,6 @@ namespace _05_Lab5
             //int evenCount = 0;
             //int oddCount = 0;
 
-            //// Підрахунок парних і непарних чисел
             //for (int i = 0; i < n; i++)
             //{
             //    for (int j = 0; j < m; j++)
@@ -303,19 +300,17 @@ namespace _05_Lab5
             //int[,] matrix = new int[rows, cols];
             //Random rand = new Random();
 
-            //// Заповнення матриці випадковими числами та виведення її на екран
             //Console.WriteLine("Матриця 7x3:");
             //for (int i = 0; i < rows; i++)
             //{
             //    for (int j = 0; j < cols; j++)
             //    {
-            //        matrix[i, j] = rand.Next(1, 101); // Випадкові числа від 1 до 100
+            //        matrix[i, j] = rand.Next(1, 101);
             //        Console.Write(matrix[i, j] + "\t");
             //    }
             //    Console.WriteLine();
             //}
 
-            //// Обчислення кількості елементів, кратних 3, для кожного стовпця
             //for (int j = 0; j < cols; j++)
             //{
             //    int count = 0;
