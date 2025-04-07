@@ -18,9 +18,9 @@ namespace _03_Lab3
             string inputFile = "C:\\Users\\artem\\Desktop\\numbers.txt";
             string outputFile = "C:\\Users\\artem\\Desktop\\numbers_result.txt";
 
-            if (!File.Exists(inputFile))
+            if (!File.Exists(outputFile))
             {
-                FileStream fs = new FileStream(outputFile, FileMode.Create);
+                FileStream fs = new FileStream("C:\\Users\\artem\\Desktop\\numbers_result.txt", FileMode.Create);
             }
 
             string[] lines = File.ReadAllLines(inputFile);

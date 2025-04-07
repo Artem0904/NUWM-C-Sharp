@@ -30,11 +30,6 @@ namespace _02_Lab2
         }
         public static decimal GetAvgPrice(Product[] products)
         {
-            if (products.Length == 0)
-            {
-                Console.WriteLine("Array is empty!");
-                return -1;
-            }
             decimal sum = 0;
             foreach (Product p in products)
             {
@@ -60,8 +55,8 @@ namespace _02_Lab2
             products[9] = new Product("Webcam", 10, 99, "CamWorld");
 
             decimal avgPrice = GetAvgPrice(products);
-            if (avgPrice != -1)
-                Console.WriteLine($"Товари з ціною, вище середньої({avgPrice})\n");
+
+            Console.WriteLine($"Товари з ціною, вище середньої({avgPrice})\n");
             foreach (Product p in products)
                 if (p.Price >= avgPrice)
                     Console.WriteLine(p);

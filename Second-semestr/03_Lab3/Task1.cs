@@ -37,6 +37,10 @@ namespace _03_Lab3
                 Console.WriteLine("Кількість елементів не відповідає заданій!");
                 return;
             }
+            else if(numberStrings.Length > count)
+            {
+                Console.WriteLine("Кількість елементів більша ніж задана!");
+            }
             int[] numbers = new int[count];
 
             for (int i = 0; i < count; i++)

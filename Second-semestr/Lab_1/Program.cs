@@ -9,9 +9,9 @@ namespace _01_Lab1
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            Task1.Run();
+            //Task1.Run();
             //Task2.Run();
-            //Task3.Run();
+            Task3.Run();
         }
     }
 }

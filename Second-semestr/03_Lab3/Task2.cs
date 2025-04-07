@@ -24,10 +24,10 @@ namespace _03_Lab3
                 this.Address = Address;
                 this.BirthDate = BirthDate;
             }
-            public override string ToString()
-            {
-                return $"Прізвище: {LastName}\nІм'я: {FirstName}\nПо батькові: {MiddleName}\nАдреса: {Address}\nДата народження: {BirthDate.Date}\n";
-            }
+            //public override string ToString()
+            //{
+            //    return $"Прізвище: {LastName}\nІм'я: {FirstName}\nПо батькові: {MiddleName}\nАдреса: {Address}\nДата народження: {BirthDate.Date}\n";
+            //}
         }
 
         public static void Run()
@@ -35,9 +35,9 @@ namespace _03_Lab3
             string inputFile = "C:\\Users\\artem\\Desktop\\guards.txt";
             string outputFile = "C:\\Users\\artem\\Desktop\\oldest_guard.txt";
 
-            if (!File.Exists(inputFile))
+            if (!File.Exists(outputFile))
             {
-                FileStream fs = new FileStream(outputFile, FileMode.Create);
+                FileStream fs = new FileStream("C:\\\\Users\\\\artem\\\\Desktop\\\\oldest_guard.txt", FileMode.Create);
             }
 
             string[] lines = File.ReadAllLines(inputFile);
@@ -51,13 +51,13 @@ namespace _03_Lab3
                     Console.WriteLine("Некоректний формат запису!");
                     continue;
                 }
-
+                
                 string lastName = parts[0].Trim();
                 string firstName = parts[1].Trim();
                 string middleName = parts[2].Trim();
                 string address = parts[3].Trim();
                 DateTime birthDate;
-
+               
                 if (!DateTime.TryParse(parts[4].Trim(), out birthDate))
                 {
                     Console.WriteLine("Помилка у форматі дати!");
